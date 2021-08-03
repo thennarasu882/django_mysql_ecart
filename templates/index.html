@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        padding: 50px;
+        background-color: black;
+        color: white;
+      }
+      table,
+      th {
+        border: 2px solid rgb(168, 168, 168);
+        font-size: larger;
+      }
+      th {
+        background-color: rgb(255, 81, 0);
+        color: black;
+      }
+      th,
+      td {
+        padding: 15px;
+      }
+    </style>
+    <table>
+      <tr>
+        <th>order id</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Ordered product</th>
+        <th>Quantity</th>
+        <th>Total price</th>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <td>{{i.order_id}}</td>
+
+        <td>{{i.quantity}}</td>
+        <!-- <td>{{i.total_price}}</td> -->
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
